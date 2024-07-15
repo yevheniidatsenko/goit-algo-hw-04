@@ -43,20 +43,28 @@ Sorted list: [1, 1, 2, 3, 4, 4, 5, 6]
 - Draw conclusions about the performance of each algorithm.
 - Implement a function to merge sorted lists.
 
-# Results of code execution:
+## Results of code execution:
 
 ![alt text](assets/SCR-20240715-kiup.png)
 
-# Conclusion:
+## Analysis and Observations
 
-Timsort (sorted and sort):
+1. **Merge Sort**:
 
-Timsort performed the best on all datasets. This proves its effectiveness due to its hybrid nature that combines merge and insertion sorting. Using the built-in sorted and sort functions is most appropriate for most sorting tasks in Python.
+   - **Complexity**: O(n log n)
+   - **Performance**: Merge Sort showed consistent performance across different data sizes due to its predictable time complexity. It handled large data sets efficiently but had a higher overhead for smaller data sets compared to Timsort.
 
-Merge Sort:
+2. **Insertion Sort**:
 
-Merge Sort is effective for medium to large datasets, but is inferior to Timsort. This algorithm has stable performance, but its execution time increases with the size of the data.
+   - **Complexity**: O(n^2)
+   - **Performance**: As expected, Insertion Sort performed well on smaller data sets but showed significantly higher execution times for larger data sets. This aligns with its quadratic time complexity, making it less suitable for large data sets.
 
-Insertion Sort:
+3. **Timsort**:
+   - **Complexity**: O(n log n)
+   - **Performance**: Timsort, implemented via Python's built-in `sorted` function, consistently outperformed both Merge Sort and Insertion Sort across all data sizes. Its hybrid nature, combining Merge Sort and Insertion Sort, allowed it to adapt efficiently to different data characteristics, making it the most efficient algorithm in our tests.
 
-Insertion Sort works well on small data sets, but its performance drops off sharply as the data size increases. Due to its quadratic complexity, this algorithm is not suitable for large datasets.
+## Conclusion
+
+- **Timsort** emerged as the clear winner in terms of efficiency and adaptability, justifying its use in Python's built-in sorting functions. It combines the strengths of Merge Sort and Insertion Sort to handle various data patterns effectively.
+- **Merge Sort** is a reliable algorithm for large data sets, offering predictable and consistent performance with a time complexity of O(n log n).
+- **Insertion Sort** is best suited for small or nearly sorted data sets due to its simplicity and efficiency in such cases, despite its quadratic time complexity.
