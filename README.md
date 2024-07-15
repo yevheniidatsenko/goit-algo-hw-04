@@ -42,3 +42,21 @@ Sorted list: [1, 1, 2, 3, 4, 4, 5, 6]
 - Analyze the efficiency of each algorithm.
 - Draw conclusions about the performance of each algorithm.
 - Implement a function to merge sorted lists.
+
+# Results of code execution:
+
+![alt text](assets/SCR-20240715-kiup.png)
+
+# Conclusion:
+
+Timsort (sorted and sort):
+
+Timsort performed the best on all datasets. This proves its effectiveness due to its hybrid nature that combines merge and insertion sorting. Using the built-in sorted and sort functions is most appropriate for most sorting tasks in Python.
+
+Merge Sort:
+
+Merge Sort is effective for medium to large datasets, but is inferior to Timsort. This algorithm has stable performance, but its execution time increases with the size of the data.
+
+Insertion Sort:
+
+Insertion Sort works well on small data sets, but its performance drops off sharply as the data size increases. Due to its quadratic complexity, this algorithm is not suitable for large datasets.
